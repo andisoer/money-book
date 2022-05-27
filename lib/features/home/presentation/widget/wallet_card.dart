@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:money_book/common/config/themes.dart';
 
 class WalletCard extends StatelessWidget {
@@ -9,7 +10,6 @@ class WalletCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(16),
       margin: const EdgeInsets.symmetric(horizontal: 16),
       height: MediaQuery.of(context).size.height * 1 / 4,
       decoration: BoxDecoration(
@@ -33,34 +33,51 @@ class WalletCard extends StatelessWidget {
           )
         ],
       ),
-      child: Stack(
-        alignment: AlignmentDirectional.bottomStart,
-        children: [
-          Row(
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
+      child: ClipRRect(
+        borderRadius: const BorderRadius.all(
+          Radius.circular(16),
+        ),
+        child: Stack(
+          alignment: AlignmentDirectional.centerEnd,
+          children: [
+            Positioned(
+              left: 180,
+              child: SvgPicture.asset('assets/vectors/blob.svg'),
+            ),
+            Container(
+              margin: const EdgeInsets.all(16),
+              child: Stack(
+                alignment: AlignmentDirectional.bottomStart,
                 children: [
-                  Text(
-                    'Saldo Anda',
-                    style: AppTheme.textStyle.f16TextPrimaryW400,
+                  Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Saldo Anda',
+                            style: AppTheme.textStyle.f16TextPrimaryW400,
+                          ),
+                          Text(
+                            'Rp 12.420.000',
+                            style: AppTheme.textStyle.f22TextPrimaryw700,
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
-                  Text(
-                    'Rp 12.420.000',
-                    style: AppTheme.textStyle.f22TextPrimaryw700,
+                  Positioned(
+                    child: Text(
+                      'Dompet 1, Dompet 2, Dompet 3',
+                      style: AppTheme.textStyle.f14TextPrimaryW600,
+                    ),
                   ),
                 ],
               ),
-            ],
-          ),
-          Positioned(
-            child: Text(
-              'Dompet 1, Dompet 2, Dompet 3',
-              style: AppTheme.textStyle.f14TextPrimaryW600,
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
