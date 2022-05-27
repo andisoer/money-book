@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:money_book/home/home_page.dart';
+import 'package:money_book/features/home/presentation/page/home_page.dart';
 
 void main() {
   runApp(const MyApp());

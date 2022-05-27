@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:money_book/features/home/presentation/widget/item_transaction.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -107,6 +108,14 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
+            const SizedBox(
+              height: 16,
+            ),
+            const ItemTransaction(),
+            const ItemTransaction(),
+            const ItemTransaction(),
+            const ItemTransaction(),
+            const ItemTransaction(),
           ],
         ),
       )),
