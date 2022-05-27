@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:money_book/common/config/themes.dart';
 import 'package:money_book/features/home/presentation/widget/item_action.dart';
 
 class MenuAction extends StatelessWidget {
@@ -10,29 +11,39 @@ class MenuAction extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: const [
-        SizedBox(
+      children: [
+        const SizedBox(
           width: 24,
         ),
         ItemAction(
           title: 'Tambah Transaksi',
-          icon: Icon(Icons.add),
+          icon: const Icon(Icons.add),
+          color: AppTheme.colors.baseColor,
         ),
-        SizedBox(
+        const SizedBox(
           width: 16,
         ),
         ItemAction(
           title: 'Daftar Dompet',
-          icon: Icon(Icons.account_balance_wallet),
+          icon: const Icon(Icons.account_balance_wallet),
+          gradient: LinearGradient(
+            begin: Alignment.bottomLeft,
+            end: Alignment.topRight,
+            colors: [
+              AppTheme.colors.baseColor,
+              AppTheme.colors.secondaryColor,
+            ],
+          ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 16,
         ),
         ItemAction(
           title: 'Menu Lainnya',
-          icon: Icon(Icons.more_horiz),
+          icon: const Icon(Icons.more_horiz),
+          color: AppTheme.colors.secondaryColor,
         ),
-        SizedBox(
+        const SizedBox(
           width: 24,
         ),
       ],

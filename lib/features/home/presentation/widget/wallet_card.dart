@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:money_book/common/config/themes.dart';
 
 class WalletCard extends StatelessWidget {
   const WalletCard({
@@ -13,13 +13,20 @@ class WalletCard extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 16),
       height: MediaQuery.of(context).size.height * 1 / 4,
       decoration: BoxDecoration(
-        color: Colors.grey,
+        gradient: LinearGradient(
+          begin: Alignment.bottomLeft,
+          end: Alignment.topRight,
+          colors: [
+            AppTheme.colors.baseColor,
+            AppTheme.colors.secondaryColor,
+          ],
+        ),
         borderRadius: const BorderRadius.all(
           Radius.circular(16),
         ),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
+            color: AppTheme.colors.baseColor.withOpacity(0.2),
             blurRadius: 8,
             spreadRadius: 1,
             offset: const Offset(0, 4),
@@ -37,21 +44,11 @@ class WalletCard extends StatelessWidget {
                 children: [
                   Text(
                     'Saldo Anda',
-                    style: GoogleFonts.montserrat(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 16,
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 8,
+                    style: AppTheme.textStyle.f16TextPrimaryW400,
                   ),
                   Text(
                     'Rp 12.420.000',
-                    style: GoogleFonts.montserrat(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 22,
-                      letterSpacing: 0.5,
-                    ),
+                    style: AppTheme.textStyle.f22TextPrimaryw700,
                   ),
                 ],
               ),
@@ -59,12 +56,8 @@ class WalletCard extends StatelessWidget {
           ),
           Positioned(
             child: Text(
-              'Dompet 1, Dompet 2,Dompet 3',
-              style: GoogleFonts.montserrat(
-                fontWeight: FontWeight.w600,
-                color: Colors.black.withOpacity(0.6),
-                fontSize: 14,
-              ),
+              'Dompet 1, Dompet 2, Dompet 3',
+              style: AppTheme.textStyle.f14TextPrimaryW600,
             ),
           ),
         ],

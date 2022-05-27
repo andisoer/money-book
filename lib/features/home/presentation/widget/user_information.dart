@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:money_book/common/config/themes.dart';
 
 class UserInformation extends StatelessWidget {
   const UserInformation({
@@ -18,23 +18,16 @@ class UserInformation extends StatelessWidget {
             children: [
               Text(
                 'Selamat datang,',
-                style: GoogleFonts.montserrat(
-                  fontWeight: FontWeight.w400,
-                  letterSpacing: -0.5,
-                  fontSize: 14,
-                ),
+                style: AppTheme.textStyle.f14TextPrimaryW400,
               ),
               Text(
                 'Andi Surya',
-                style: GoogleFonts.montserrat(
-                  fontWeight: FontWeight.w700,
-                  fontSize: 18,
-                  letterSpacing: -0.5,
-                ),
+                style: AppTheme.textStyle.f18TextPrimaryw700,
               ),
             ],
           ),
           CircleAvatar(
+            backgroundColor: AppTheme.colors.secondaryColor,
             child: Container(),
           ),
         ],

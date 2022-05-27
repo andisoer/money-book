@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:money_book/common/config/themes.dart';
 import 'package:money_book/features/home/presentation/widget/item_transaction.dart';
 import 'package:money_book/features/home/presentation/widget/menu_action.dart';
 import 'package:money_book/features/home/presentation/widget/user_information.dart';
@@ -37,18 +37,11 @@ class HomePage extends StatelessWidget {
                 children: [
                   Text(
                     'Tranksaksi Terbaru',
-                    style: GoogleFonts.montserrat(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 16,
-                      letterSpacing: -0.5,
-                    ),
+                    style: AppTheme.textStyle.f16TextPrimaryW700,
                   ),
                   Text(
                     'Lihat Semua',
-                    style: GoogleFonts.montserrat(
-                      fontSize: 14,
-                      letterSpacing: -0.5,
-                    ),
+                    style: AppTheme.textStyle.f14TextPrimary,
                   ),
                 ],
               ),

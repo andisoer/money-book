@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:money_book/common/config/themes.dart';
 
 class ItemAction extends StatelessWidget {
   final String title;
   final Widget icon;
+  final Color? color;
+  final Gradient? gradient;
   const ItemAction({
     required this.title,
     required this.icon,
+    this.color,
+    this.gradient,
     Key? key,
   }) : super(key: key);
 
@@ -15,8 +19,9 @@ class ItemAction extends StatelessWidget {
     return Column(
       children: [
         Container(
-          decoration: const BoxDecoration(
-            color: Colors.grey,
+          decoration: BoxDecoration(
+            gradient: gradient,
+            color: color ?? Colors.grey,
             shape: BoxShape.circle,
           ),
           child: IconButton(onPressed: () {}, icon: icon),
@@ -26,11 +31,7 @@ class ItemAction extends StatelessWidget {
         ),
         Text(
           title,
-          style: GoogleFonts.montserrat(
-            fontSize: 14,
-            fontWeight: FontWeight.w400,
-            letterSpacing: -0.5,
-          ),
+          style: AppTheme.textStyle.f14TextPrimaryW600,
         ),
       ],
     );

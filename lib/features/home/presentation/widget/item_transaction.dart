@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:money_book/common/config/themes.dart';
 
 class ItemTransaction extends StatelessWidget {
   const ItemTransaction({
@@ -35,18 +35,14 @@ class ItemTransaction extends StatelessWidget {
                 children: [
                   Text(
                     'Title',
-                    style: GoogleFonts.montserrat(
-                        fontWeight: FontWeight.w700, fontSize: 18),
+                    style: AppTheme.textStyle.f18TextPrimaryw700,
                   ),
                   const SizedBox(
                     height: 2,
                   ),
                   Text(
                     '01 Januari 2021',
-                    style: GoogleFonts.montserrat(
-                      fontSize: 14,
-                      letterSpacing: -0.5,
-                    ),
+                    style: AppTheme.textStyle.f14TextPrimaryW400,
                   ),
                 ],
               ),
@@ -56,20 +52,14 @@ class ItemTransaction extends StatelessWidget {
                   children: [
                     Text(
                       '-Rp 150k',
-                      style: GoogleFonts.montserrat(
-                        fontWeight: FontWeight.w700,
-                        fontSize: 18,
-                      ),
+                      style: AppTheme.textStyle.f18TextPrimaryw700,
                     ),
                     const SizedBox(
                       height: 2,
                     ),
                     Text(
                       'Makanan',
-                      style: GoogleFonts.montserrat(
-                        fontSize: 14,
-                        letterSpacing: -0.5,
-                      ),
+                      style: AppTheme.textStyle.f14TextPrimaryW400,
                     )
                   ],
                 ),
