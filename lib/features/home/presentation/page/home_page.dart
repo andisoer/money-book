@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:money_book/features/home/presentation/widget/item_transaction.dart';
+import 'package:money_book/features/home/presentation/widget/menu_action.dart';
+import 'package:money_book/features/home/presentation/widget/user_information.dart';
+import 'package:money_book/features/home/presentation/widget/wallet_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,102 +18,43 @@ class HomePage extends StatelessWidget {
             const SizedBox(
               height: 24,
             ),
+            const UserInformation(),
+            const SizedBox(
+              height: 24,
+            ),
+            const WalletCard(),
+            const SizedBox(
+              height: 32,
+            ),
+            const MenuAction(),
+            const SizedBox(
+              height: 32,
+            ),
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 16),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text('Selamat datang'),
-                      Text('Andi Surya'),
-                    ],
+                  Text(
+                    'Tranksaksi Terbaru',
+                    style: GoogleFonts.montserrat(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 16,
+                      letterSpacing: -0.5,
+                    ),
                   ),
-                  CircleAvatar(
-                    child: Container(),
+                  Text(
+                    'Lihat Semua',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 14,
+                      letterSpacing: -0.5,
+                    ),
                   ),
                 ],
               ),
             ),
             const SizedBox(
               height: 24,
-            ),
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 16),
-              height: MediaQuery.of(context).size.height * 1 / 4,
-              decoration: const BoxDecoration(
-                color: Colors.grey,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(16),
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 24,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                const SizedBox(
-                  width: 24,
-                ),
-                Container(
-                  decoration: const BoxDecoration(
-                    color: Colors.grey,
-                    shape: BoxShape.circle,
-                  ),
-                  child: IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.add),
-                  ),
-                ),
-                const SizedBox(
-                  width: 16,
-                ),
-                Container(
-                  decoration: const BoxDecoration(
-                    color: Colors.grey,
-                    shape: BoxShape.circle,
-                  ),
-                  child: IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.account_balance_wallet),
-                  ),
-                ),
-                const SizedBox(
-                  width: 16,
-                ),
-                Container(
-                  decoration: const BoxDecoration(
-                    color: Colors.grey,
-                    shape: BoxShape.circle,
-                  ),
-                  child: IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.more_horiz),
-                  ),
-                ),
-                const SizedBox(
-                  width: 24,
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 24,
-            ),
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 16),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text('Tranksaksi Terbaru'),
-                  Text('Lihat Semua'),
-                ],
-              ),
-            ),
-            const SizedBox(
-              height: 16,
             ),
             const ItemTransaction(),
             const ItemTransaction(),

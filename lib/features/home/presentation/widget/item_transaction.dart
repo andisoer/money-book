@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ItemTransaction extends StatelessWidget {
   const ItemTransaction({
@@ -27,19 +28,50 @@ class ItemTransaction extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                width: 16,
+                width: 20,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  Text('Title'),
-                  Text('01 Januari 2021'),
+                children: [
+                  Text(
+                    'Title',
+                    style: GoogleFonts.montserrat(
+                        fontWeight: FontWeight.w700, fontSize: 18),
+                  ),
+                  const SizedBox(
+                    height: 2,
+                  ),
+                  Text(
+                    '01 Januari 2021',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 14,
+                      letterSpacing: -0.5,
+                    ),
+                  ),
                 ],
               ),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
-                  children: const [Text('data'), Text('kategori')],
+                  children: [
+                    Text(
+                      '-Rp 150k',
+                      style: GoogleFonts.montserrat(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 18,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 2,
+                    ),
+                    Text(
+                      'Makanan',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 14,
+                        letterSpacing: -0.5,
+                      ),
+                    )
+                  ],
                 ),
               ),
             ],
