@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:money_book/common/config/themes.dart';
+import 'package:money_book/common/constants/route_constants.dart';
 import 'package:money_book/features/home/presentation/widget/item_action.dart';
 
 class MenuAction extends StatelessWidget {
@@ -19,6 +20,9 @@ class MenuAction extends StatelessWidget {
           title: 'Tambah Transaksi',
           icon: const Icon(Icons.add),
           color: AppTheme.colors.baseColor,
+          onPressed: () {
+            Navigator.pushNamed(context, RouteConstants.addTransaction);
+          },
         ),
         const SizedBox(
           width: 16,

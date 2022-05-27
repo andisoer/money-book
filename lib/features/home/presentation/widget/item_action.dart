@@ -6,11 +6,13 @@ class ItemAction extends StatelessWidget {
   final Widget icon;
   final Color? color;
   final Gradient? gradient;
+  final Function()? onPressed;
   const ItemAction({
     required this.title,
     required this.icon,
     this.color,
     this.gradient,
+    this.onPressed,
     Key? key,
   }) : super(key: key);
 
@@ -24,7 +26,7 @@ class ItemAction extends StatelessWidget {
             color: color ?? Colors.grey,
             shape: BoxShape.circle,
           ),
-          child: IconButton(onPressed: () {}, icon: icon),
+          child: IconButton(onPressed: onPressed, icon: icon),
         ),
         const SizedBox(
           height: 8,
