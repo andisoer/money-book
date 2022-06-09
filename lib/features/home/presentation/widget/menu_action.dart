@@ -18,7 +18,10 @@ class MenuAction extends StatelessWidget {
         ),
         ItemAction(
           title: 'Tambah Transaksi',
-          icon: const Icon(Icons.add),
+          icon: Icon(
+            Icons.add,
+            color: AppTheme.colors.black,
+          ),
           color: AppTheme.colors.baseColor,
           onPressed: () {
             Navigator.pushNamed(context, RouteConstants.addTransaction);
@@ -29,7 +32,10 @@ class MenuAction extends StatelessWidget {
         ),
         ItemAction(
           title: 'Daftar Dompet',
-          icon: const Icon(Icons.account_balance_wallet),
+          icon: Icon(
+            Icons.account_balance_wallet,
+            color: AppTheme.colors.black,
+          ),
           gradient: LinearGradient(
             begin: Alignment.bottomLeft,
             end: Alignment.topRight,
@@ -44,7 +50,10 @@ class MenuAction extends StatelessWidget {
         ),
         ItemAction(
           title: 'Menu Lainnya',
-          icon: const Icon(Icons.more_horiz),
+          icon: Icon(
+            Icons.more_horiz,
+            color: AppTheme.colors.black,
+          ),
           color: AppTheme.colors.secondaryColor,
         ),
         const SizedBox(

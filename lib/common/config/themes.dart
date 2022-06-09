@@ -11,6 +11,7 @@ class _Colors {
   final secondaryColor = const Color(0xffE9724C);
   final textPrimary = const Color(0xff481D24);
   final white = const Color(0xffffffff);
+  final black = const Color(0xff000000);
 }
 
 class _TextStyles {
