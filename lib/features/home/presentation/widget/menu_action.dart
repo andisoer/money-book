@@ -44,6 +44,9 @@ class MenuAction extends StatelessWidget {
               AppTheme.colors.secondaryColor,
             ],
           ),
+          onPressed: () {
+            Navigator.pushNamed(context, RouteConstants.addWallet);
+          },
         ),
         const SizedBox(
           width: 16,

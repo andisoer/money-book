@@ -40,6 +40,7 @@ dependencies:
   flutter_bloc: ^8.0.1
   google_fonts: ^3.0.1
   flutter_svg: ^1.0.3
+  equatable: ^2.0.3
 
 dev_dependencies:
   flutter_test:
