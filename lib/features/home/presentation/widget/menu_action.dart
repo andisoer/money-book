@@ -12,6 +12,7 @@ class MenuAction extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const SizedBox(
           width: 24,

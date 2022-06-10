@@ -18,24 +18,27 @@ class ItemAction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          decoration: BoxDecoration(
-            gradient: gradient,
-            color: color ?? Colors.grey,
-            shape: BoxShape.circle,
+    return Expanded(
+      child: Column(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              gradient: gradient,
+              color: color ?? Colors.grey,
+              shape: BoxShape.circle,
+            ),
+            child: IconButton(onPressed: onPressed, icon: icon),
           ),
-          child: IconButton(onPressed: onPressed, icon: icon),
-        ),
-        const SizedBox(
-          height: 8,
-        ),
-        Text(
-          title,
-          style: AppTheme.textStyle.f14TextPrimaryW600,
-        ),
-      ],
+          const SizedBox(
+            height: 8,
+          ),
+          Text(
+            title,
+            style: AppTheme.textStyle.f14TextPrimaryW600,
+            textAlign: TextAlign.center,
+          ),
+        ],
+      ),
     );
   }
 }
