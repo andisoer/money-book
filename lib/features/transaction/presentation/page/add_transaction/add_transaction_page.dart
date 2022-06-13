@@ -22,8 +22,19 @@ class _AddTransactionPageState extends State<AddTransactionPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppTheme.colors.white,
-      appBar: const CustomAppBarWidget(
+      appBar: CustomAppBarWidget(
         title: 'Tambah Transaksi',
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.check,
+              color: AppTheme.colors.secondaryColor,
+            ),
+          )
+        ],
       ),
       body: SafeArea(
         child: SingleChildScrollView(

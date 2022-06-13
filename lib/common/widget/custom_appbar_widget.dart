@@ -4,9 +4,11 @@ import 'package:money_book/common/config/themes.dart';
 class CustomAppBarWidget extends StatelessWidget
     implements PreferredSizeWidget {
   final String title;
+  final List<Widget>? actions;
 
   const CustomAppBarWidget({
     required this.title,
+    this.actions,
     Key? key,
   }) : super(key: key);
 
@@ -29,17 +31,7 @@ class CustomAppBarWidget extends StatelessWidget
           color: AppTheme.colors.black,
         ),
       ),
-      actions: [
-        IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: Icon(
-            Icons.check,
-            color: AppTheme.colors.secondaryColor,
-          ),
-        )
-      ],
+      actions: actions,
     );
   }
 

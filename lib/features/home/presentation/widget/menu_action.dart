@@ -46,7 +46,7 @@ class MenuAction extends StatelessWidget {
             ],
           ),
           onPressed: () {
-            Navigator.pushNamed(context, RouteConstants.addWallet);
+            Navigator.pushNamed(context, RouteConstants.listWallet);
           },
         ),
         const SizedBox(
