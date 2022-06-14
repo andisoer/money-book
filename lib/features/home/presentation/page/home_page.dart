@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:money_book/common/config/themes.dart';
-import 'package:money_book/features/home/presentation/widget/item_transaction.dart';
-import 'package:money_book/features/home/presentation/widget/menu_action.dart';
-import 'package:money_book/features/home/presentation/widget/user_information.dart';
-import 'package:money_book/features/home/presentation/widget/wallet_card.dart';
+import 'package:money_book/features/home/presentation/widgets/item_transaction.dart';
+import 'package:money_book/features/home/presentation/widgets/menu_action.dart';
+import 'package:money_book/features/home/presentation/widgets/user_information.dart';
+import 'package:money_book/features/home/presentation/widgets/wallet_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);

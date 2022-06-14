@@ -21,6 +21,49 @@ class WalletListPage extends StatelessWidget {
           color: AppTheme.colors.white,
         ),
       ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: const [SizedBox(height: 16), ItemWallet()],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class ItemWallet extends StatelessWidget {
+  const ItemWallet({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 16),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Dompet Fisik',
+                style: AppTheme.textStyle.f16TextPrimaryW700,
+              ),
+              Text(
+                'Rp 55.0000',
+                style: AppTheme.textStyle.f14TextPrimaryW600,
+              )
+            ],
+          ),
+          const SizedBox(
+            height: 4,
+          ),
+          const Divider(
+            thickness: 1,
+          ),
+        ],
+      ),
     );
   }
 }
