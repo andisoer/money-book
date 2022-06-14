@@ -16,7 +16,7 @@ So yeah, i try to create my own expense app :D (except for connecting to local b
 
 
 ## Screenshot
-todo
+<img src="/screenshots/ss-1.png" alt="drawing" height="400"/> <img src="/screenshots/ss-2.png" alt="drawing" height="400"/>
 
 
 ## Note
