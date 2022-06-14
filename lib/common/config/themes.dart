@@ -13,6 +13,7 @@ class _Colors {
   final white = const Color(0xffffffff);
   final black = const Color(0xff000000);
   final grey = const Color(0xFF9E9E9E);
+  final transparent = const Color(0x009E9E9E);
 }
 
 class _TextStyles {
