@@ -43,7 +43,7 @@ class _AddTransactionPageState extends State<AddTransactionPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(height: 24),
+                const SizedBox(height: 16),
                 const CustomInputWidget(
                   label: 'Nama Transaksi',
                   hintText: 'Cilok',

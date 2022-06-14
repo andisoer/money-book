@@ -5,4 +5,7 @@ class RouteConstants {
   static const String addTransaction = '/addTransaction';
   static const String addWallet = '/addWallet';
   static const String listWallet = '/listWallet';
+  static const String addListTransactionCategory =
+      '/addListTransactionCategory';
+  static const String listTransactionCategory = '/listTransactionCategory';
 }

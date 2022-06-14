@@ -30,7 +30,7 @@ class AddWalletPage extends StatelessWidget {
             margin: const EdgeInsets.symmetric(horizontal: 16),
             child: Column(
               children: const [
-                SizedBox(height: 24),
+                SizedBox(height: 16),
                 CustomInputWidget(
                     label: 'Nama Dompet', hintText: 'Bank Indonesia'),
                 SizedBox(height: 16),

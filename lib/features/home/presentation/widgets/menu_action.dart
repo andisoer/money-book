@@ -76,74 +76,89 @@ class MenuAction extends StatelessWidget {
       context: context,
       isScrollControlled: true,
       builder: (BuildContext _context) {
-        return Wrap(
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(16),
-                  topRight: Radius.circular(16),
+        return const MoreMenuBottomSheetWidget();
+      },
+    );
+  }
+}
+
+class MoreMenuBottomSheetWidget extends StatelessWidget {
+  const MoreMenuBottomSheetWidget({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      children: [
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(16),
+              topRight: Radius.circular(16),
+            ),
+            color: AppTheme.colors.white,
+          ),
+          padding: const EdgeInsets.all(16),
+          child: SafeArea(
+            child: Column(
+              children: [
+                Container(
+                  height: 6,
+                  width: 64,
+                  decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(16),
+                    ),
+                    color: AppTheme.colors.grey.withOpacity(0.5),
+                  ),
                 ),
-                color: AppTheme.colors.white,
-              ),
-              padding: const EdgeInsets.all(16),
-              child: SafeArea(
-                child: Column(
+                const SizedBox(
+                  height: 16,
+                ),
+                Row(
                   children: [
-                    Container(
-                      height: 6,
-                      width: 64,
-                      decoration: BoxDecoration(
-                        borderRadius: const BorderRadius.all(
-                          Radius.circular(16),
-                        ),
-                        color: AppTheme.colors.grey.withOpacity(0.5),
+                    ItemAction(
+                      title: 'Kategori Transaksi',
+                      icon: Icon(
+                        Icons.category,
+                        color: AppTheme.colors.black,
                       ),
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomLeft,
+                        end: Alignment.topRight,
+                        colors: [
+                          AppTheme.colors.baseColor,
+                          AppTheme.colors.secondaryColor,
+                        ],
+                      ),
+                      onPressed: () {
+                        Navigator.pushNamed(
+                            context, RouteConstants.listTransactionCategory);
+                      },
                     ),
-                    const SizedBox(
-                      height: 16,
-                    ),
-                    Row(
-                      children: [
-                        ItemAction(
-                          title: 'Kategori Transaksi',
-                          icon: Icon(
-                            Icons.category,
-                            color: AppTheme.colors.black,
-                          ),
-                          gradient: LinearGradient(
-                            begin: Alignment.bottomLeft,
-                            end: Alignment.topRight,
-                            colors: [
-                              AppTheme.colors.baseColor,
-                              AppTheme.colors.secondaryColor,
-                            ],
-                          ),
-                        ),
-                        ItemAction(
-                          title: 'Laporan Transaksi',
-                          icon: Icon(
-                            Icons.payment,
-                            color: AppTheme.colors.black,
-                          ),
-                          gradient: LinearGradient(
-                            begin: Alignment.bottomLeft,
-                            end: Alignment.topRight,
-                            colors: [
-                              AppTheme.colors.baseColor,
-                              AppTheme.colors.secondaryColor,
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
+                    ItemAction(
+                      title: 'Laporan Transaksi',
+                      icon: Icon(
+                        Icons.payment,
+                        color: AppTheme.colors.black,
+                      ),
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomLeft,
+                        end: Alignment.topRight,
+                        colors: [
+                          AppTheme.colors.baseColor,
+                          AppTheme.colors.secondaryColor,
+                        ],
+                      ),
+                    )
                   ],
                 ),
-              ),
+              ],
             ),
-          ],
-        );
-      },
+          ),
+        ),
+      ],
     );
   }
 }
