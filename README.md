@@ -10,9 +10,9 @@ So yeah, i try to create my own expense app :D (except for connecting to local b
 
 ## Tech Stack (In Progress)
 - Flutter 2.10.5
-- [Bloc] (https://pub.dev/packages/flutter_bloc)
+- [Bloc](https://pub.dev/packages/flutter_bloc)
 - Clean Architecture (in progress)
-- [Hive] (https://pub.dev/packages/hive) (todo)
+- [Hive](https://pub.dev/packages/hive) (todo)
 
 
 ## Screenshot
