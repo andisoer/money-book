@@ -1,16 +1,32 @@
-# money_book
+# Money Book
+A bit simple app to record your expenses.
 
-A new Flutter project.
 
-## Getting Started
+## Background
+I've tried many apps that record, track and show our expenses. But, idk most of them didn't suit my needs. 
+From needing premium account just to use simple feature until using complicated connection to real bank and it take so looong to fetch data.
+So yeah, i try to create my own expense app :D (except for connecting to local bank, didn't research local bank API yet :p).
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Tech Stack (In Progress)
+- Flutter 2.10.5
+- [Bloc] (https://pub.dev/packages/flutter_bloc)
+- Clean Architecture (in progress)
+- [Hive] (https://pub.dev/packages/hive) (todo)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshot
+todo
+
+
+## Note
+This app is still in progress, newest changes always on **development branch**
+
+
+## Contribute
+You can create PR, i will review it.
+
+
+## Uploading to Playstore / App Store
+Didn't plan it yet.
+
