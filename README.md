@@ -3,7 +3,7 @@ A bit simple app to record your expenses.
 
 
 ## Background
-I've tried many apps that record, track and show our expenses. But, idk most of them didn't suit my needs. 
+I've tried many apps that record, track and show our expenses. But, idk most of them doesn't suit my needs. 
 From needing premium account just to use simple feature until using complicated connection to real bank and it take so looong to fetch data.
 So yeah, i try to create my own expense app :D (except for connecting to local bank, didn't research local bank API yet :p).
 
